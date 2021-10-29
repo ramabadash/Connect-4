@@ -1,0 +1,45 @@
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: url("https://media.istockphoto.com/vectors/board-games-pattern-vector-id1090601642?k=20&m=1090601642&s=612x612&w=0&h=BzRBRaD-Yr7vkY0QwXuFDd3UCcE6MCYQQbbspkpu0UE=");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    font-size: 100px;
+    text-align: center;
+}
+.board {
+    display: grid;
+    width: 700px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+    border: 5px solid black;
+    border-radius: 5px;
+    background: teal;
+    margin-left: 20%;
+    margin-right: 25%;
+    margin-top: 10%;
+}
+  
+.cell {
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+  
+.message {
+    width: 300px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: inherit;
+}
+  
