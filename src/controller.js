@@ -13,6 +13,8 @@ class Controller {
     this.view.restartEvent.addListener(() => { //restart the game
       document.querySelector('.board').remove();
       document.querySelector('.message').remove();
+      document.querySelector('h1').remove();
+      document.querySelector('h2').remove();
 
       const app = new Controller();
       app.run();

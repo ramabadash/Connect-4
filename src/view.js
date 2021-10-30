@@ -12,26 +12,43 @@ class View {
 
   //The function builds an empty panel, with 49 cells
   render() {
+    //header
+    const header = document.createElement("h1");
+    header.textContent = "Let's Play CONNECT-4";
+    //score board
+    const scoreBoard = document.createElement("h2");
+    const currentScore = JSON.parse(localStorage.getItem("scores")); 
+    scoreBoard.textContent = `Score Boad: \n Yellow: ${currentScore.yellow} \n Red: ${currentScore.red}`;
+    
+    const resetScoreboardBtn = document.createElement("button");
+    resetScoreboardBtn.textContent = "Reset Scoreboard";
+    resetScoreboardBtn.addEventListener("click", () => { 
+      localStorage.setItem("scores", JSON.stringify({"yellow" : 0, "red": 0}));
+      this.restartEvent.trigger();
+    });
+    scoreBoard.appendChild(resetScoreboardBtn);
+    
+    //board
     const board = document.createElement('div');
     board.className = 'board';
 
     this.cells = Array(49).fill().map((_, i) => {
       const cell = document.createElement('div');
       cell.className = 'cell';
-
       //Adding eventListener by clicking "Cell" triggers the model's play function indirectly.
       cell.addEventListener('click', () => {
         this.playEvent.trigger(i);
       });
-
       board.appendChild(cell);
-
       return cell;
     });
     //Create an area for a win / draw
     this.message = document.createElement('div');
     this.message.className = 'message';
     
+    //appent all elements
+    document.body.appendChild(header);
+    document.body.appendChild(scoreBoard);
     document.body.appendChild(board);
     document.body.appendChild(this.message);
   }
@@ -53,7 +70,6 @@ class View {
   //Restart the data and start new gmae
   restart() {
     const btn = document.createElement('button');
-    btn.className = 'restart-btn';
     btn.textContent = 'Play Again';
     btn.addEventListener('click', () => {
       this.restartEvent.trigger();

@@ -7,6 +7,7 @@ class Connect4 {
     this.board = Array(49).fill(); //7*7 board
     this.currentPlayer = 'yellow'; //yellow start
     this.finished = false; // game is not finished
+    this.scores = localStorage.getItem('scores'); //Local storage for scores history
 
     //A new Event that contains a function that receives information (object) with a player and an indexת
     //and activates the updateCell function of the view.
@@ -67,6 +68,7 @@ class Connect4 {
     //Announce the winner useing View class
     if (victory) {
       this.victoryEvent.trigger(this.currentPlayer);
+      this.updateScores();
     }
     return victory;
   }
@@ -81,9 +83,14 @@ class Connect4 {
 
     return draw;
   }
-  //switch players -> red or blue
+  //switch players -> red or yellow
   switchPlayer() {
     this.currentPlayer = this.currentPlayer === 'yellow' ? 'red' : 'yellow';
+  }
+  updateScores() {
+    const currentScore = JSON.parse(localStorage.getItem("scores"));
+    currentScore[this.currentPlayer] += 1;
+    localStorage.setItem("scores", JSON.stringify(currentScore) )
   }
 }
 

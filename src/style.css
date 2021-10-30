@@ -6,8 +6,15 @@ body {
     background-size: cover;
 }
 h1 {
-    font-size: 100px;
+    font-size: 70px;
     text-align: center;
+}
+h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    text-align: center;
+    background-color:rgba(99, 166, 168, 0.8) ;
 }
 .board {
     display: grid;
@@ -19,7 +26,7 @@ h1 {
     background: rgb(44, 52, 122);
     margin-left: 30%;
     margin-right: 30%;
-    margin-top: 10%;
+    margin-top: 10px;
 }
   
 .cell {
@@ -46,7 +53,7 @@ h1 {
     font-weight: bold;
     color:blanchedalmond;
     margin-top: 10px;
-    background-color:rgb(86, 48, 189);
+    background-color:rgba(86, 48, 189, 0.8);
     border-radius: 10%;
 }
 
