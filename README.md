@@ -6,7 +6,7 @@
 * JS
 * CSS
 
-#### My Github page - 
+#### My Github page - https://ramabadash.github.io/Connect-4/dist
 ----
 ## Instructions
 
