@@ -1,6 +1,6 @@
 
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: cursive;
     background-image: url("https://media.istockphoto.com/vectors/board-games-pattern-vector-id1090601642?k=20&m=1090601642&s=612x612&w=0&h=BzRBRaD-Yr7vkY0QwXuFDd3UCcE6MCYQQbbspkpu0UE=");
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,9 +16,9 @@ h1 {
     grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
     border: 5px solid black;
     border-radius: 5px;
-    background: teal;
-    margin-left: 20%;
-    margin-right: 25%;
+    background: rgb(44, 52, 122);
+    margin-left: 30%;
+    margin-right: 30%;
     margin-top: 10%;
 }
   
@@ -35,11 +35,36 @@ h1 {
 }
   
 .message {
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 30%;
+    width: 40%;
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
+    color:blanchedalmond;
     margin-top: 10px;
-    background-color: inherit;
+    background-color:rgb(86, 48, 189);
+    border-radius: 10%;
 }
-  
+
+button {
+    align-self: center;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    transition: all .35s;
+}
+button:hover{
+    color: #fff;
+    background-color: #ff003b;
+    transition: all .35s;
+}

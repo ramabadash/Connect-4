@@ -5,7 +5,9 @@ import Event from './event';
 class View {
   constructor() {
     //A new Event that contains a function that expects to have index and activates the model's play function
-    this.playEvent = new Event(); 
+    this.playEvent = new Event();
+    //Start new game
+    this.restartEvent = new Event(); 
   }
 
   //The function builds an empty panel, with 49 cells
@@ -40,11 +42,23 @@ class View {
   }
   //Victory announcement
   victory(winner) {
-    this.message.innerHTML = `${winner} wins!`;
+    this.message.textContent = `${winner} wins!`;
+    this.restart(); //append restart button
   }
   //Draw announcement
   draw() {
-    this.message.innerHTML = "It's a draw!";
+    this.message.textContent = "It's a draw!";
+    this.restart(); //append restart button
+  }
+  //Restart the data and start new gmae
+  restart() {
+    const btn = document.createElement('button');
+    btn.className = 'restart-btn';
+    btn.textContent = 'Play Again';
+    btn.addEventListener('click', () => {
+      this.restartEvent.trigger();
+    });
+    this.message.appendChild(btn);
   }
 }
 

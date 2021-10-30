@@ -5,7 +5,7 @@ import Event from './event';
 class Connect4 {
   constructor() {
     this.board = Array(49).fill(); //7*7 board
-    this.currentPlayer = 'blue'; //blue start
+    this.currentPlayer = 'yellow'; //yellow start
     this.finished = false; // game is not finished
 
     //A new Event that contains a function that receives information (object) with a player and an indexת
@@ -83,7 +83,7 @@ class Connect4 {
   }
   //switch players -> red or blue
   switchPlayer() {
-    this.currentPlayer = this.currentPlayer === 'blue' ? 'red' : 'blue';
+    this.currentPlayer = this.currentPlayer === 'yellow' ? 'red' : 'yellow';
   }
 }
 
