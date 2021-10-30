@@ -11,10 +11,10 @@
 ## Instructions
 
 #### **Connect Four is a two-player connection board game.**
-* A 7X7 board is provided.
+* A 7 X 7 board is provided.
 * The first player to play is yellow and the next player is red.
-* The goal is to achieve a sequence of 4 discs in your color in a column or diagonal row.
-* **how do you play?** Select the column in which you want to place the disk and it will fit in the lowest available space, so queue until the goal is achieved.
+* The goal is to achieve a sequence of 4 discs in your color in a column or diagonal or row.
+* **how do you play?** Select the column in which you want to place the disk and it will fit in the lowest available space, until the goal is achieved.
 * There is even a scoreboard where you can see who is leading!
 #### Have fun!
 ----
